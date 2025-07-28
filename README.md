@@ -1,68 +1,89 @@
-
-# S&P 500 Data Downloader
+# 📈 S&P 500 Data Downloader
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/Yigitbasi/s-and-p-500-data/issues)
 [![Language](https://img.shields.io/badge/language-R-blue.svg)](https://www.r-project.org/)
 
-A simple yet powerful R script to download the latest daily price data for all S&P 500 constituents directly from Yahoo Finance.
+**S&P 500 Data Downloader**, S&P 500 endeksindeki tüm şirketlerin en güncel fiyat verilerini ve sektör bilgilerini tek bir dosyada toplamayı kolaylaştıran bir R scriptidir.
 
-This project aims to provide a clean, easy-to-use tool for researchers, students, and analysts who need up-to-date financial data for the entire S&P 500 index.
+## 🚀 Özellikler
 
-## ✨ Key Features
+- **Tüm S&P 500:** Endeksteki ~500 şirketin verilerini otomatik indirir.
+- **Güncel Veriler:** Son günlük fiyat (Open, High, Low, Close, Volume, Adjusted Close) bilgilerini çeker.
+- **Hata Yönetimi:** İndirilemeyen semboller atlanarak script'in tamamlanması sağlanır.
+- **Zengin İçerik:** Fiyat verileri, şirketin sektör ve endüstri bilgileriyle birleştirilir.
+- **Tek Dosya Çıktı:** Tüm veriler analiz için tek bir temiz CSV dosyasında toplanır.
 
-* **Comprehensive:** Downloads data for all ~500 companies in the S&P 500.
-* **Up-to-Date:** Fetches the most recent daily price data (Open, High, Low, Close, Volume, Adjusted Close).
-* **Robust:** Includes error handling to skip any tickers that fail to download, ensuring the script runs to completion.
-* **Enriched Data:** Automatically joins the downloaded price data with corresponding company sector and industry information.
-* **Single Output:** Consolidates all data into a single, clean CSV file for easy analysis.
+## 🖼️ Örnek Veri Seti Görünümü
 
-## 🚀 Getting Started
+Aşağıda oluşturulan CSV dosyasının örnek bir ekran görüntüsü bulunmaktadır:
 
-Follow these steps to get the data on your local machine.
+![Veri Seti Ekran Görüntüsü](images/dataset_sample.png)
 
-### Prerequisites
+> **Not:** Kendi veri seti ekran görüntünüzü eklemek için aşağıdaki adımları takip ediniz.
 
-You need to have R and RStudio installed on your computer.
-* [Download R](https://cran.r-project.org/)
-* [Download RStudio Desktop](https://posit.co/download/rstudio-desktop/)
+---
 
-### Installation
+## 🛠️ Kurulum ve Kullanım
 
-1. **Clone the repository:**
+### Gereksinimler
+
+- [R](https://cran.r-project.org/) ve [RStudio](https://posit.co/download/rstudio-desktop/) kurulu olmalı.
+
+### Kurulum Adımları
+
+1. **Depoyu Klonlayın:**
     ```sh
     git clone https://github.com/Yigitbasi/s-and-p-500-data.git
     cd s-and-p-500-data
     ```
 
-2. **Open the R script `Low.R` in RStudio.**
+2. **RStudio'da `Low.R` dosyasını açın.**
 
-3. **Install the required libraries** by running the following command in the R console:
+3. **Gerekli kütüphaneleri yükleyin:**
     ```R
     install.packages(c("quantmod", "dplyr", "openxlsx"))
     ```
 
-### Usage
+### Kullanım
 
-1. **Ensure `sp500_verileri.csv` is in the same directory.** This file contains the list of S&P 500 symbols and their sectors.
-2. **Run the entire `Low.R` script** in RStudio (you can press `Ctrl+Shift+Enter`).
-3. The script will start downloading the data for each company. You will see progress messages in the console.
-4. Once finished, a file named **`sp500_daily_data.csv`** will be created in the project directory. This file contains the data you need!
+1. `sp500_verileri.csv` dosyasının proje klasöründe olduğundan emin olun.
+2. `Low.R` script'ini RStudio'da çalıştırın (`Ctrl+Shift+Enter` ile tamamını çalıştırabilirsiniz).
+3. Her şirket için veri indirme işlemi başlayacak ve konsolda ilerleme mesajları göreceksiniz.
+4. İşlem tamamlandığında, proje klasöründe **`sp500_daily_data.csv`** dosyası oluşacaktır.
 
-## 🤝 Contributing
+---
 
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+## ✨ Katkı Sağlayın
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Her türlü katkıya açığız! Özellik önerileri, hata bildirimleri veya geliştirme istekleriniz için lütfen fork'layıp pull request gönderin ya da [issue açın](https://github.com/Yigitbasi/s-and-p-500-data/issues).
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+- Fork'layın
+- Yeni bir dal oluşturun (`git checkout -b feature/HarikaOzellik`)
+- Değişikliklerinizi commitleyin (`git commit -m 'Harika özelliği ekle'`)
+- Branch'i gönderin (`git push origin feature/HarikaOzellik`)
+- Pull Request açın
 
-Please see our **[Contributing Guide](CONTRIBUTING.md)** for more details on our code of conduct and the process for submitting pull requests.
+Daha fazla bilgi için [Katkı Rehberi](CONTRIBUTING.md) dosyasına göz atabilirsiniz.
 
-## 📝 License
+---
 
-This project is distributed under the MIT License. See `LICENSE` for more information.
+## 📝 Lisans
+
+Bu proje MIT lisansı ile dağıtılmaktadır. Daha fazla bilgi için `LICENSE` dosyasını inceleyebilirsiniz.
+
+---
+
+## 📷 README'ye Veri Seti Ekran Görüntüsü Eklemek
+
+1. **Veri setinizin (örneğin, `sp500_daily_data.csv`) bir kısmının ekran görüntüsünü alın.**
+2. Proje klasörünüzde `images` adında bir klasör oluşturun ve ekran görüntüsünü örneğin `dataset_sample.png` adıyla bu klasöre ekleyin.
+3. README dosyanızda ilgili bölüme şu markdown satırını ekleyin:
+    ```markdown
+    ![Veri Seti Ekran Görüntüsü](images/dataset_sample.png)
+    ```
+4. Değişiklikleri kaydedip GitHub'a gönderin. Görsel otomatik olarak README'de görünecektir.
+
+---
+
+Herhangi bir sorunuz olursa lütfen [issue](https://github.com/Yigitbasi/s-and-p-500-data/issues) açmaktan çekinmeyin!
