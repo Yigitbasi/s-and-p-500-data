@@ -18,7 +18,7 @@
 
 Aşağıda oluşturulan CSV dosyasının örnek bir ekran görüntüsü bulunmaktadır:
 
-![Veri Seti Ekran Görüntüsü](images/dataset_sample.png)
+![Veri Seti Ekran Görüntüsü](images/s-p-dataset.png)
 
 > **Not:** Kendi veri seti ekran görüntünüzü eklemek için aşağıdaki adımları takip ediniz.
 
